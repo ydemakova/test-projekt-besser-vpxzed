@@ -325,8 +325,16 @@ li:hover {
   font-size: .95em;
 }
 
-.table-data-references {
-  border-bottom: 1px solid 'ddd;'
+#reference-list .border-bottom {
+  border-bottom: 1px solid #ddd;
+}
+
+#reference-list h4 {
+  margin: 1rem 0 0 0;
+}
+
+#reference-list p {
+  margin: 0;
 }
 
 .references-images {
