@@ -291,7 +291,11 @@ li:hover {
  margin: 3px;
 }
 
-.work-experience-data-left {
+#experience {
+  padding: 80px;
+}
+
+#experience .work-experience-data-left {
   display: inline-block;
   width: 200px;
   margin: 15px;
@@ -299,8 +303,26 @@ li:hover {
   background-color: lightblue;
 }
 
-.work-experience-data-right {
-  width: 500px;
+#experience .work-experience-data-right {
+  width: 100%;
+}
+
+#experience .work-experience-data-right * {
+  letter-spacing: normal;
+}
+
+#experience .work-experience-data-right .heading {
+  font-size: 1.25em;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+#experience .work-experience-data-right .image,
+#experience .work-experience-data-right .name {
+  margin-bottom: .75rem;
+}
+
+#experience .work-experience-data-right .text {
+  font-size: .95em;
 }
 
 .table-data-references {
