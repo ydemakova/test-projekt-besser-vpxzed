@@ -1,0 +1,546 @@
+/**
+ */
+
+/******************************************************************************/
+/* Common tags */
+/******************************************************************************/
+
+
+* {
+  font-family: 'Quicksand', sans-serif;
+  box-sizing: border-box;
+  line-height: 1.6em;
+  letter-spacing: .1em;
+}
+
+body {
+  background-color: #f3f3f3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: black;
+}
+
+h2 {
+ color:#ddd;
+}
+
+th, td {
+  padding: 7px;
+}
+
+hr { 
+  color: #f3e5e5;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+i { 
+    font-family: 'FontAwesome', sans-serif; 
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('http://fortawesome.github.io/Font-Awesome/assets/font-awesome/font/fontawesome-webfont.eot?v=3.2.1');
+  src: url('http://fortawesome.github.io/Font-Awesome/assets/font-awesome/font/fontawesome-webfont.eot?#iefix&v=3.2.1') format('embedded-opentype'), url('http://fortawesome.github.io/Font-Awesome/assets/font-awesome/font/fontawesome-webfont.woff?v=3.2.1') format('woff'), url('http://fortawesome.github.io/Font-Awesome/assets/font-awesome/font/fontawesome-webfont.ttf?v=3.2.1') format('truetype'), url('http://fortawesome.github.io/Font-Awesome/assets/font-awesome/font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+::selection {
+  background-color: lightblue;
+}
+
+/******************************************************************************/
+/* Page */
+/******************************************************************************/
+
+#page-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1300px;
+}
+
+/******************************************************************************/
+/* Header, top navigation */
+/******************************************************************************/
+
+#header { /* total height: 90px */
+  align-items: flex-end;
+  display: flex;
+  margin-bottom: 20px;
+  height: 70px;
+  width: 100%;
+}
+
+#logo {
+  flex: 0 0 200px;
+}
+
+#logo a img {
+  height: 30px;
+}
+
+#logo a span {
+  font-size: 1.8em;
+  font-weight: 700;
+}
+
+#top-nav {
+  flex: 1 1 auto;
+  text-align: right;
+}
+
+#top-nav {
+  width: 100%;
+}
+
+#top-nav ul {
+  list-style-type: none;
+}
+
+#top-nav ul li {
+  display: inline-block;
+}
+
+#top-nav ul li a {
+  display: inline-block;
+  color: rgb(117, 117, 117);
+  font-weight: 700;
+  font-size: 1.1em;
+  padding: 0 .75em;
+  text-decoration: none;
+}
+
+#top-nav ul li a:hover {
+  color: rgb(55, 55, 55);
+}
+
+#about-me-block {
+  position: relative;
+  line-height: 200%;
+  height: 454px;
+}
+
+#signature {
+  position: absolute;
+  bottom: 20px;
+  right: 8px;
+}
+
+.pages-dropdown {
+  position: relative;
+}
+
+.pages-dropdown-content {
+  position: absolute;
+  display: none;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  z-index: 1;
+  text-align: left;
+  width: 200px;
+  height: 170px;
+}
+
+.pages-dropdown-content a {
+  font-size: 5px;
+  padding: 10px;
+}
+.pages-dropdown-content a:hover {
+  background-color: lightblue;
+}
+
+.pages-dropdown:hover .pages-dropdown-content {
+  display: block;
+}
+
+/******************************************************************************/
+/* Main */
+/******************************************************************************/
+
+li {
+  display: inline-block;
+  padding: 3px; 
+  cursor: pointer;
+} 
+
+li:hover {
+ color: black;
+}
+
+#main-wrapper {
+}
+
+#main {
+}
+
+#share-button {
+  background-color: white;
+  border: 2px solid #c0e3e7;
+  border-radius: 20px;
+  color: black;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 40px;
+  position: absolute;
+  bottom: 40px;
+  text-transform: uppercase;
+  transition: box-shadow .25s;
+}
+
+#share-button:hover {
+ box-shadow: 0 2px #ddd;
+}
+
+#personal-information-languages-block {
+  display: flex;
+}
+
+#personal-information {
+  flex:1;
+}
+
+#languages {
+  flex:1;
+}
+
+#clients-heading {
+  text-transform: uppercase;
+  margin: 20px 170px 30px 285px;
+}
+.personal-information-data{
+   text-transform: uppercase;
+   color: black;
+   font-weight: 700;
+   letter-spacing: 0;
+}
+
+.bullet {
+ display: inline-block;
+ vertical-align: middle;
+ width: .938em;
+ height: .938em;
+ border-radius: 50%;
+ border-width: 1px;
+ border-style: solid;
+ color: lightblue;
+ background-color: lightblue;
+ margin: 3px;
+}
+
+.bullet-without-fill {
+ display: inline-block;
+ vertical-align: middle;
+ width: .938em;
+ height: .938em;
+ border-radius: 50%;
+ border-width: 1px;
+ border-style: solid;
+ color: lightblue;
+ margin: 3px;
+}
+
+.work-experience-data-left {
+  display: inline-block;
+  width: 200px;
+  margin: 15px;
+  border-right: 1px solid grey;
+  background-color: lightblue;
+}
+
+.work-experience-data-right {
+  width: 500px;
+}
+
+.table-data-references {
+  border-bottom: 1px solid 'ddd;'
+}
+
+.references-images {
+  border-radius: 50px;
+}
+
+.clients-table-image {
+  cursor: pointer;
+}
+
+.new-form {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem;
+}
+
+.new-form label {
+  flex-basis: 50px 0;
+  flex: 1;
+  text-align: right;
+  margin: 0 20px;
+}
+
+.new-form input {
+  margin: 5px 0;
+  flex: 2;
+  border: none;
+  background-color: #ddd;
+  height: 40px;
+}
+.new-form textarea {
+  background-color: #ddd;
+  border: none;
+  height: 150px;
+  width: 480px;
+  resize: vertical;
+}
+
+.new-form button {
+  margin: 0 255px 0 280px;
+  background-color: lightblue;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 10px 30px;
+  font-weight: 700;
+}
+.new-form button:hover {
+  box-shadow: 0 3px #ddd;
+  transition: box-shadow .25s;
+}
+
+#contact-me-sidebar {
+  margin-left: 265px;
+}
+
+.contact-me-icons {
+  width: 23px;
+  height: 23px;
+  margin-right: 5px;
+}
+/******************************************************************************/
+/* Sidebar cart */
+/******************************************************************************/
+
+#sidebar-cart {
+  flex: 0 0 300px;
+  position: relative;
+  margin-right: 40px;
+  margin-top: 95px;
+}
+
+#sidebar-cart-content {
+  border: 0px solid grey;
+  background-color: #c0e3e7;
+  box-shadow: -4px 7px 15px 1px rgba(0,0,0,.2);
+  text-align: center;
+  position: fixed;
+  top: 90px;
+  width: 300px;
+}
+
+#sidebar-cart-head {
+  padding: 40px;
+}
+
+#sidebar-cart-head #my-photo {
+  border-radius: 100%;
+}
+
+#sidebar-cart-head p {
+  color: gray;
+}
+
+#sidebar-cart-button {
+  background-color: white;
+  padding: 40px 0;
+}
+
+#sidebar-cart-button button {
+  background-color: black;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 1em;
+  padding: 12px 20px;
+  text-transform: uppercase;
+}
+
+#sidebar-cart-icons li{
+ margin-right: 2px; 
+ cursor: pointer;
+}
+
+#clients-table {
+  border-spacing: 50px;
+}
+
+.table-data-references {
+ border-bottom: 1px solid lightgrey;
+}
+
+/******************************************************************************/
+/* Sidebar navigation */
+/******************************************************************************/
+
+
+#sidebar-nav {
+  flex: 0 0 70px;
+  margin-left: 10px;
+  margin-top: 90px;
+}
+
+#sidebar-nav-content {
+  border: none;
+  text-align: center;
+  position: fixed;
+  width: 20px;
+}
+
+#sidebar-nav-content ul {
+  padding: 0;
+}
+
+#sidebar-nav-content li {
+  margin-top: 18px;
+  position: relative;
+}
+
+#sidebar-nav-content li img {
+  width: 24px;
+  height: auto;
+}
+
+#sidebar-nav-content p img:hover {
+  opacity: 0.5;
+}
+
+#sidebar-nav-content li .tooltip {
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,.25);
+  padding: 0 15px;
+  position: absolute;
+  left: 50px;
+  line-height: 36px;
+  opacity: 0;
+  top: -2px;
+  transition: opacity 1s;
+  z-index: 10;
+}
+
+#sidebar-nav-content li .tooltip::before {
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent; 
+  border-right: 8px solid white; 
+  content: '';
+  display: block;
+  height: 0; 
+  left: -8px;
+  position: absolute;
+  top: 8px;
+  width: 0; 
+}
+
+#sidebar-nav-content li:hover .tooltip {
+  opacity: 1;
+  transition: opacity .5s;
+}
+
+/******************************************************************************/
+/* Content */
+/******************************************************************************/
+
+.content {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 50px;
+  margin-bottom: 40px;
+  margin-right: 10px;
+}
+
+/******************************************************************************/
+/* Gallery */
+/******************************************************************************/
+
+.gallery {
+  display: flex;
+}
+
+.gallery-left, .gallery-right {
+  flex: 1;
+  flex-basis: 50%;
+}
+
+.gallery-right {
+  margin-left: 1px;
+}
+
+.gallery .gallery-field {
+  position: relative;
+  line-height: 0;
+  margin-bottom: 1px;
+}
+
+.gallery .gallery-field img {
+  width: 100%;
+}
+
+.gallery .gallery-field:hover .gallery-field-text {
+  opacity: 1;
+}
+
+.gallery .gallery-field-text {
+  background-color: rgba(0,0,0,.75);
+  height: 100%;
+  opacity: 0;
+  padding: 50px 20px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  transition: opacity .25s;
+  width: 100%;
+  z-index: 10;
+}
+
+.gallery .gallery-field-text p {
+  color: white;
+  font-size: 1.2em;
+}
+
+.gallery .gallery-field-text button {
+  background-color: lightblue;
+  border-radius: 20px;
+  font-size: 1em;
+  font-weight: 700;
+  color: black;
+  margin-top: 80px;
+  padding: 10px 20px;
+}
+
+/******************************************************************************/
+/* Footer */
+/******************************************************************************/
+
+#footer {
+  font-size: 7px;
+  text-align: center;
+}
+
+/******************************************************************************/
