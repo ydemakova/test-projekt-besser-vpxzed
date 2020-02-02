@@ -105,6 +105,10 @@ i {
   font-weight: 700;
 }
 
+/******************************************************************************/
+/* Top navigation */
+/******************************************************************************/
+
 #top-nav {
   flex: 1 1 auto;
   text-align: right;
@@ -120,6 +124,7 @@ i {
 
 #top-nav ul li {
   display: inline-block;
+  position: relative;
 }
 
 #top-nav ul li a {
@@ -131,7 +136,8 @@ i {
   text-decoration: none;
 }
 
-#top-nav ul li a:hover {
+#top-nav ul li a:hover,
+#top-nav > ul > li:hover a {
   color: rgb(55, 55, 55);
 }
 
@@ -147,32 +153,56 @@ i {
   right: 8px;
 }
 
-.pages-dropdown {
-  position: relative;
-}
-
-.pages-dropdown-content {
+#top-nav > ul > li .sub-pages-container {
+  /* background-color: red; */
   position: absolute;
-  display: none;
-  background-color: white;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  border-radius: 5px;
-  z-index: 1;
-  text-align: left;
-  width: 200px;
-  height: 170px;
+  left: -35%;
+  padding-top: calc(1.4em + 20px);
+  top: 0;
+  transition: visibility .5s;
+  visibility: hidden;
+  z-index: 10;
 }
 
-.pages-dropdown-content a {
-  font-size: 5px;
-  padding: 10px;
+#top-nav > ul > li:hover .sub-pages-container {
+  visibility: visible;
 }
-.pages-dropdown-content a:hover {
+
+#top-nav ul.sub-pages {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 5px 20px rgba(0,0,0,.25);
+  opacity: 0;
+  padding: 10px 20px;
+  position: relative;
+  text-align: left;
+  top: 50px;
+  transition: top .5s, opacity .5s;
+}
+
+#top-nav > ul > li:hover ul.sub-pages {
+  opacity: 1;
+  top: 0;
+}
+
+#top-nav ul.sub-pages li {
+  border-radius: 20px;
+  display: block;
+  font-weight: normal;
+  margin: 5px 0;
+  transition: background-color .5s;
+}
+
+#top-nav ul.sub-pages li:hover {
   background-color: lightblue;
 }
 
-.pages-dropdown:hover .pages-dropdown-content {
-  display: block;
+#top-nav ul.sub-pages li a {
+  font-weight: normal;
+}
+
+#top-nav ul.sub-pages li:hover a {
+  font-weight: normal;
 }
 
 /******************************************************************************/
@@ -441,7 +471,8 @@ li:hover {
   line-height: 36px;
   opacity: 0;
   top: -2px;
-  transition: opacity 1s;
+  transition: opacity 1s, visibility 1s;
+  visibility: hidden;
   z-index: 10;
 }
 
@@ -461,6 +492,7 @@ li:hover {
 #sidebar-nav-content li:hover .tooltip {
   opacity: 1;
   transition: opacity .5s;
+  visibility: visible;
 }
 
 /******************************************************************************/
